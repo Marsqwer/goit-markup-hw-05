@@ -93,6 +93,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--NAVY_BLUE);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus{
@@ -129,6 +130,7 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.02em;
 color: var(--SLATE);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact:hover,
 .header-contact:focus{
@@ -149,13 +151,13 @@ margin-left: auto;
 }
                            /* HERO */
 .hero{
-width: 100%;
+min-width: 1440px;
 padding-top: 188px;
 padding-bottom: 188px;
 background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../imges/people-office.jpg );
 background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+background-size: cover;
+background-position: center;
 }
 .hero-title{
 font-family: 'Roboto';
@@ -185,6 +187,7 @@ border-radius: 4px;
 margin: 0 auto;
 margin-top: 30px;
 border: none;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus{
@@ -300,6 +303,7 @@ margin-bottom: 8px;
   justify-content: center;
   align-items: center;
   fill: var(--CLOUD);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link-svg:hover,
 .team-link-svg:focus{
@@ -329,6 +333,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 fill: var(--LIGHT_SLATE);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:hover ,
 .customers-link:focus{
@@ -380,6 +386,7 @@ background: rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
   fill: var(--CLOUD);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .svg-link:hover ,
 .svg-link:focus{
@@ -403,6 +410,9 @@ color: var(--IRIS);
   background: var(--CLOUD);
 border-radius: 4px;
 border: none;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover,
 .menu-btn:focus{
@@ -422,6 +432,8 @@ color: #FFFFFF;
 width: calc((100% - 48px) / 3); /*(ВАЖНО ЗНАТЬ)*/
 background: var(--white);
 border: 1px solid #EEEEEE;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-items:nth-child(-n+6){
   margin-bottom: 48px;
@@ -475,10 +487,11 @@ color: var(--SLATE);
 }
 .menu-items:hover,
 .menu-items:focus{
-
-  transform: translateY(0);
+transform: translateY(0);
   border: 1px solid #F4F4FD;
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+ 0px 1px 1px rgba(46, 47, 66, 0.16), 
+ 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
                           /* MODAL */
 .backdrop{
@@ -487,6 +500,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   position: fixed;
   top: 0;
   background-color: var(--NAVY_BLUE_modal);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal{
   width: 408px;
@@ -511,4 +526,11 @@ top: 24px;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.madal-btn:hover,
+.madal-btn:hover{
+  background-color: var(--OCEAN);
+  fill: var(--CLOUD);
 }
